@@ -1,11 +1,24 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <h1>Deddy Reaction Timmer</h1>
+  <button @click="calback">Play</button>
 </template>
-
+<script>
+export default {
+  name: "App",
+  components: {},
+  data: function() {
+    return {
+      isPlaying: false,
+      delay: null,
+    };
+  },
+  methods: {
+    start() {
+      this.isPlaying = true;
+    },
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
